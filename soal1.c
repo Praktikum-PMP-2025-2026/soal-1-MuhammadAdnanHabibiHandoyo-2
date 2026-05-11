@@ -67,7 +67,7 @@ int main(){
     if(ada == 0){
         printf("ISOLATED NONE\n");
     }else{
-        printf("ISOLATED");
+        printf("ISOLATED ");
         for(int i=0; i<N; i++){
             if(idxIsolated[i] == 1){
                 printf("%d", i);
