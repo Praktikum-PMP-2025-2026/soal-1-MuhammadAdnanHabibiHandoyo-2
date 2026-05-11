@@ -41,7 +41,7 @@ int main(){
 
     initGraph(&g, N);
 
-    int idxIsolated [10] = 999;
+    int idxIsolated = 0;
     int maxDerajat = 0;
     int idxderajat = 0;
     int count = 0;
@@ -56,18 +56,13 @@ int main(){
             idxderajat = i;
         }
         if(count == 0){
-            idxIsolated[i] = i;
+            idxIsolated = i;
         }
         printf("DEGREE %d %d\n", i, count);
         count = 0;
     }
     printf("MAX_VERTEX %d\n", idxderajat);
-    printf("ISOLATED ");
-    for(int i=0; i<100; i++){
-        if(idxIsolated[i] != 999){
-            printf("%d", &idxIsolated[i]);
-        }
-    }
+    printf("ISOLATED %d\n", idxIsolated);
 
     return 0;
 }
