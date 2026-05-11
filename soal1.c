@@ -1,11 +1,12 @@
 /** EL2008 Praktikum Pemecahan Masalah dengan Pemrograman 2024/2025
- *   Modul               : 2 Structurre and Dynamic Array
+ *   Modul               : 5 Foundation of Algorithm
  *   Hari dan Tanggal    : Rabu, 22 April 2026
  *   Nama (NIM)          : Muhammad Adnan Habibi Handoyo (13224093)
- *   Nama File           : soal2.c
+ *   Nama File           : soal1.c
  *   Deskripsi           : 
- * Program menerima data nama meteor, massa, dan kemurnian kemudian diurutkan
- * berdasarkan kemurnian, massa, dan alfabet
+ *   Menerima input adjacent matrix graph dengan orde NxN kemudian dihitung derajat untuk tiap barisnya
+ *   dikeluarkan output berupa nilai derajat dari tiap baris matriks, index derajat max, dan indeks baris  
+ *   dengan derajat 0
  */
 
 #include <stdio.h>
