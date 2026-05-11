@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
 
 #define MAX 100
 
@@ -30,25 +31,7 @@ void initGraph(Graph *g, int v){
     }
 }
 
-void addEdge(Graph *g, int src, int dest){
 
-    g->adj[src][dest] = 1;
-    g->adj[dest][src] = 1;
-}
-
-int degree(Graph *g, int v){
-
-    int count = 0;
-
-    for(int i=0; i<g->vertex; i++){
-
-        if(g->adj[v][i] == 1){
-            count++;
-        }
-    }
-
-    return count;
-}
 
 int main(){
     Graph g;
@@ -58,7 +41,7 @@ int main(){
 
     initGraph(&g, N);
 
-    int idxIsolated = 0;
+    int idxIsolated [10] = 999;
     int maxDerajat = 0;
     int idxderajat = 0;
     int count = 0;
@@ -73,13 +56,18 @@ int main(){
             idxderajat = i;
         }
         if(count == 0){
-            idxIsolated = i;
+            idxIsolated[i] = i;
         }
         printf("DEGREE %d %d\n", i, count);
         count = 0;
     }
     printf("MAX_VERTEX %d\n", idxderajat);
-    printf("ISOLATED %d\n", idxIsolated);
+    printf("ISOLATED ");
+    for(int i=0; i<100; i++){
+        if(idxIsolated[i] != 999){
+            printf("%d", &idxIsolated[i]);
+        }
+    }
 
     return 0;
 }
